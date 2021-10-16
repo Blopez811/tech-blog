@@ -1,9 +1,8 @@
 const router = require('express').Router();
-const { moduleExpression } = require('@babel/types');
 const  User  = require('../../models/User');
 
-
-router.get('/users', (req, res) => {
+// get api/users
+router.get('/', (req, res) => {
     User.findAll({
         attributes: [
             'id',
