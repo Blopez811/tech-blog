@@ -32,4 +32,24 @@ router.post('/', (req, res) => {
     }
   });
 
+ router.delete('/:id', (req, res) => {
+    Comment.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(dbCommentData => {
+            if (!dbCommentData) {
+                res.status(400).json({ message: 'There is no comment with that id' })
+                return;
+            }
+            res.json(dbCommentData)
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(400).json(err);
+        })
+
+});
+
 module.exports = router;
