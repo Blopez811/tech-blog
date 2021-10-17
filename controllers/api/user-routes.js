@@ -74,7 +74,7 @@ router.post('/', (req, res) => {
         });
 });
 
-//POST /api/login
+//POST /api/users/login
 // expects username and password
 //POST /login
 router.post('/login', (req, res) => {
@@ -104,5 +104,17 @@ router.post('/login', (req, res) => {
       
     });
   });
+
+//POST /api/users/logout
+router.post('/logout', (req, res) => {
+    if(req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    }
+    else {
+        res.status(404).end();
+    }
+});  
 
 module.exports = router;
