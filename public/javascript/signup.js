@@ -19,10 +19,10 @@ async function signupHandler() {
 
         //check the response status
         if(response.ok) {
-            console.log('succes');
+            console.log('success');
             alert('Succesful account creation! You are ready to login at the login page!')
         } else {
-            alert(respsonse.statusText);
+            alert(response.statusText);
         }
     }
 };
