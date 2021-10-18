@@ -27,8 +27,11 @@
         </ul>
 
         <div class="text-end">
-          <a <button type="button" href="/login" class="btn btn-outline-light me-2">Login</button></a>
+          {{#if loggedIn}}
            <button type="button" id="logoutBtn" class="btn btn-outline-light me-2">Logout</button>
+           {{else}}
+          <a <button type="button" href="/login" class="btn btn-outline-light me-2">Login</button></a>
+          {{/if}}
           <a <button type="button" href="signup" class="btn btn-warning">Sign-up</button> </a>
         </div>
       </div>
