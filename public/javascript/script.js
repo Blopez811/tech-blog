@@ -1,5 +1,8 @@
-const loginBtn = document.querySelector('#loginBtn');
+const signupBtn = document.querySelector('#signupBtn');
+
+function signupHandler() {
+    console.log('singupHandler function fired!')
+}
 
 
-
-loginBtn.addEventListener('click', )
+signupBtn.addEventListener('click', signupHandler )
