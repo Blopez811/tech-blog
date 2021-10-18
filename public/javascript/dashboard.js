@@ -31,7 +31,7 @@ async function saveBtnHandler() {
   
     if (response.ok) {
       document.location.replace('/dashboard');
-      console.log('successful post route');
+      console.log('successful post route')
     } else {
       alert(response.statusText);
     }
