@@ -50,7 +50,7 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/dashboard', withAuth, (req,res) => {
-    res.json('Here is the glorious dashboard page!')
-})
+    res.render('dashboard')
+});
 
 module.exports = router;
