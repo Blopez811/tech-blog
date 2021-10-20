@@ -41,3 +41,4 @@ newPostBtn.addEventListener('click', newPostHandler);
 xModalBtn.addEventListener('click', exitModal);
 closeBtn.addEventListener('click', exitModal);
 saveBtn.addEventListener('click', saveBtnHandler);
+

@@ -3,10 +3,14 @@ const myModalUpdate = document.querySelector('#myModalUpdate');
 const xModalBtnUpdate = document.querySelector('#xModalBtnUpdate');
 const closeBtnUpdate = document.querySelector('#closeBtnUpdate');
 const saveBtnUpdate = document.querySelector('#saveBtnUpdate');
-function UpdatePostHandler() {
+const postsEl = document.querySelector('#postsEl')
+
+function updatePostHandler() {
+    event.preventDefault();
     console.log('create post fired!');
     myModalUpdate.style.display = "inherit";
 };
+
 
 function exitModal() {
     myModalUpdate.style.display = "none";
@@ -40,7 +44,16 @@ async function saveBtnHandler() {
     // }
 }
 
-editBtn.addEventListener('click', UpdatePostHandler);
+
 xModalBtnUpdate.addEventListener('click', exitModal);
 closeBtnUpdate.addEventListener('click', exitModal);
 saveBtnUpdate.addEventListener('click', saveBtnHandler);
+postsEl.addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log('post el event fired')
+    if (event.target.matches('button')) {
+        console.log("the event listener worked!")
+    }
+})
+
+   
