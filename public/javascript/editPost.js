@@ -25,29 +25,25 @@ async function saveBtnHandler() {
   
     const title = document.querySelector('#titleInputUpdate').value;
     const body = document.querySelector('#bodyInputUpdate').value;
-    
-
-    console.log(title);
-    console.log(body);
-    console.log(postIdEl.value)
+    postId = postIdEl.value;
   
-    // const response = await fetch(`/api/posts`, {
-    //   method: 'POST',
-    //   body: JSON.stringify({
-    //     title,
-    //     body
-    //   }),
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   }
-    // });
+    const response = await fetch(`/api/posts/${postId}`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        title,
+        body
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
   
-    // if (response.ok) {
-    //   document.location.replace('/dashboard');
-    //   console.log('successful post route');
-    // } else {
-    //   alert(response.statusText);
-    // }
+    if (response.ok) {
+      document.location.replace('/dashboard');
+      console.log('successful put route');
+    } else {
+      alert(response.statusText);
+    }
 }
 
 

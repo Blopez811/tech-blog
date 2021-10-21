@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../../models/');
 
+// /api/posts
 router.get('/', (req, res) => {
     Post.findAll({
         //Query configuration
