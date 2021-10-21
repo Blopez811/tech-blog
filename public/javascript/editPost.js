@@ -46,8 +46,20 @@ async function saveBtnHandler() {
     }
 };
 
-async function deleteButtonHandler() {
-    console.log('deletButtonHandler fired!')
+async function deleteButtonHandler(currentButton) {
+    event.preventDefault();
+    console.log('deletButtonHandler fired!');
+    console.log(currentButton.id);
+    const response = await fetch(`/api/posts/${currentButton.id}`, {
+        method: 'DELETE'
+      });
+    
+      if (response.ok) {
+        document.location.replace('/dashboard/');
+      } else {
+        alert(response.statusText);
+      }
+
 };
 
 
