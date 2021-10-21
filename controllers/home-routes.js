@@ -87,6 +87,10 @@ router.get('/dashboard', withAuth, (req,res) => {
     });
 });
 
+router.get('/singlepost/', (req, res) => {
+  res.render('single-post')
+});
+
 
 
 module.exports = router;
