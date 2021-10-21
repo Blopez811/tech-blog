@@ -44,7 +44,11 @@ async function saveBtnHandler() {
     } else {
       alert(response.statusText);
     }
-}
+};
+
+async function deleteButtonHandler() {
+    console.log('deletButtonHandler fired!')
+};
 
 
 xModalBtnUpdate.addEventListener('click', exitModal);
