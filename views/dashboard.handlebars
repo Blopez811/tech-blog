@@ -51,6 +51,9 @@
                         <label for="formGroupExampleInput2">Body</label>
                         <input type="text" class="form-control" id="bodyInputUpdate" placeholder="Updated Post">
                     </div>
+                    <div class="form-group">
+                        <input type="hidden" class="form-control" id="postId" value = {{post.id}}>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
@@ -68,7 +71,7 @@
         {{#each posts as |post|}}
         <li>
             {{> post-info post}}
-            <button class= "edit-button" id="editBtn">Edit post {{post.id}}</button>
+            <button class= "edit-button" onclick="updatePostHandler(this)" id={{post.id}}>Edit post {{post.id}}</button>
         </li>
         {{/each}}
     </ol>
