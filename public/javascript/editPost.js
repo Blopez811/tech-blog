@@ -7,8 +7,7 @@ const postsEl = document.querySelector('#postsEl')
 
 function updatePostHandler() {
     event.preventDefault();
-    console.log('create post fired!');
-    myModalUpdate.style.display = "inherit";
+    myModalUpdate.style.display = "contents";
 };
 
 
@@ -19,8 +18,8 @@ function exitModal() {
 async function saveBtnHandler() {
     event.preventDefault();
   
-    const title = document.querySelector('#titleInput').value;
-    const body = document.querySelector('#bodyInput').value;
+    const title = document.querySelector('#titleInputUpdate').value;
+    const body = document.querySelector('#bodyInputUpdate').value;
 
     console.log(title);
     console.log(body);
@@ -50,9 +49,8 @@ closeBtnUpdate.addEventListener('click', exitModal);
 saveBtnUpdate.addEventListener('click', saveBtnHandler);
 postsEl.addEventListener('click', function(event) {
     event.preventDefault();
-    console.log('post el event fired')
     if (event.target.matches('button')) {
-        console.log("the event listener worked!")
+        updatePostHandler();
     }
 })
 
