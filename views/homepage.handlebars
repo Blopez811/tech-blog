@@ -18,7 +18,9 @@
 <ol class="post-list">
   {{#each posts as |post|}}
   <li>
-    {{> post-info post }}
+    <a href="/singlepost/{{post.id}}"> {{post.title}}</a>
+    
+    {{!-- {{> post-info post }} --}}
   </li>
   {{/each}}
 </ol>
