@@ -2,7 +2,7 @@
   {{#each this}}
   <section class="comment">
     <div class="meta">
-      {{this.dataValues.user.dataValues.username}} on {{this.dataValues.created_at}}
+      {{this.dataValues.user.dataValues.username}} on {{format_date this.dataValues.created_at}}
     </div>
     <div class="text">
       {{this.dataValues.comment_text}}
