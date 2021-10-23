@@ -60,6 +60,7 @@ router.get('/dashboard', withAuth, (req,res) => {
       'title',
       'body',
       'created_at',
+      'user_id'
     ],
     include: [
       {
@@ -96,6 +97,7 @@ router.get('/singlepost/:id', (req, res) => {
         'title',
         'body',
         'created_at',
+        'user_id'
     ],
 
     include: [
@@ -119,7 +121,8 @@ router.get('/singlepost/:id', (req, res) => {
             res.status(404).json({ message: 'No post found with this id' });
             return;
         }
-        console.log(dbPostData.dataValues.comments[0].dataValues)
+        console.log(dbPostData.dataValues)
+        console.log(dbPostData.dataValues.user.dataValues.username)
         res.render('single-post', {
           post: dbPostData.dataValues
         });

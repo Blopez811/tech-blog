@@ -1,7 +1,9 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">{{title}}</h5>
-    <p>{{created_at}}</p>
-    <p class="card-text">{{body}}</p>
+    <p>{{format_date created_at}}</p>
+    <p class="card-text">{{body}}</br>
+    {{user.dataValues.username}}
+    </p>
   </div>
 </div>

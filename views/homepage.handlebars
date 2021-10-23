@@ -18,9 +18,10 @@
 <ol class="post-list">
   {{#each posts as |post|}}
   <li>
-    <a href="/singlepost/{{post.id}}"> {{post.title}}</a>
+    <a href="/singlepost/{{post.id}}"> {{post.title}} {{ format_date post.created_at}}</a>
     
     {{!-- {{> post-info post }} --}}
   </li>
   {{/each}}
 </ol>
+

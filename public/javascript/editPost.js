@@ -48,8 +48,6 @@ async function saveBtnHandler() {
 
 async function deleteButtonHandler(currentButton) {
     event.preventDefault();
-    console.log('deletButtonHandler fired!');
-    console.log(currentButton.id);
     const response = await fetch(`/api/posts/${currentButton.id}`, {
         method: 'DELETE'
       });
