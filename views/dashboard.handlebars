@@ -71,8 +71,8 @@
         {{#each posts as |post|}}
         <li>
             {{> post-info post}}
-            <button class= "edit-button" onclick="updatePostHandler(this)" id={{post.id}}>Edit post {{post.id}}</button>
-            <button class= "edit-button" onclick="deleteButtonHandler(this)" id={{post.id}}>Delete {{post.id}}</button>
+            <button class= "edit-button" onclick="updatePostHandler(this)" id={{post.id}}>Edit post</button>
+            <button class= "edit-button" onclick="deleteButtonHandler(this)" id={{post.id}}>Delete</button>
         </li>
         {{/each}}
     </ol>
