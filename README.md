@@ -13,6 +13,10 @@
   ## Description
    This is a CMS-style blog site where developers can publish their blog posts and comment on other developers' posts as well.
 
+<img width="1430" alt="Screen Shot 2021-10-24 at 5 21 53 PM" src="https://user-images.githubusercontent.com/84877211/138615276-0916fbaf-7524-41c7-96eb-fe54fc3bce6d.png">
+<img width="1430" alt="Screen Shot 2021-10-24 at 5 22 28 PM" src="https://user-images.githubusercontent.com/84877211/138615298-b63e6700-5bc8-4ad2-9b27-6a237d8c2c98.png">
+https://dry-meadow-52060.herokuapp.com/
+
   ## Installation
     No installation necessary, simply go to the website and create a user profile to begin.
 
