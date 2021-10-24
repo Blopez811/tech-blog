@@ -28,4 +28,6 @@ async function addCommentHandler() {
     }
 };
 
-addCommentBtn.addEventListener('click', addCommentHandler);
+if(addCommentBtn) {
+    addCommentBtn.addEventListener('click', addCommentHandler);
+}
