@@ -115,11 +115,19 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
+    
+    Comment.destroy({
+        where: {
+            post_id: req.params.id
+        }
+    })
+    .then(
+    
     Post.destroy({
         where: {
             id: req.params.id
         }
-    })
+    }))
         .then(dbPostData => {
             if (!dbPostData) {
                 res.status(404).json({ message: 'No post found with this id' });
@@ -131,6 +139,7 @@ router.delete('/:id', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
-});
+})
+
 
 module.exports = router

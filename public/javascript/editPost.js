@@ -64,12 +64,6 @@ async function deleteButtonHandler(currentButton) {
 xModalBtnUpdate.addEventListener('click', exitModal);
 closeBtnUpdate.addEventListener('click', exitModal);
 saveBtnUpdate.addEventListener('click', saveBtnHandler);
-// postsEl.addEventListener('click', function(event) {
-//     event.preventDefault();
-//     if (event.target.matches('button')) {
-//        postId = this.id
-//         updatePostHandler(postId);
-//     }
-// })
+
 
    
