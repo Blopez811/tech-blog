@@ -124,7 +124,9 @@ router.get('/singlepost/:id', (req, res) => {
         console.log(dbPostData.dataValues)
         console.log(dbPostData.dataValues.user.dataValues.username)
         res.render('single-post', {
-          post: dbPostData.dataValues
+          post: dbPostData.dataValues,
+          loggedIn: req.session.loggedIn
+
         });
     })
     .catch(err => {
